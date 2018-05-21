@@ -1,0 +1,53 @@
+我的vim配置：vim+cscope+minibufexp+taglist+netrw
+
+netrw.vim:http://www.vim.org/scripts/script.php?script_id=1075
+needs vim 7.3.465 or later
+install details
+netrw is now distributed as a vimball!  (see :help vimball) 
+You'll need a vimball plugin v18 or later (see vimscript#1502). 
+(if you have vim 7.1a or later, you probably can skip this step) 
+(if you're updating from the vim 7.0 distribution, please remove all runtime plugin/netrw*.vim and autoload/netrw*.vim first) 
+vim netrw.vba.gz 
+:so % 
+:q 
+
+
+taglist.vim:http://www.vim.org/scripts/script.php?script_id=273
+install details
+1. Download the taglist.zip file and unzip the files to the $HOME/.vim or the 
+    $HOME/vimfiles or the $VIM/vimfiles directory. After this step, you should 
+    have the following two files (the directory structure should be preserved): 
+
+         plugin/taglist.vim - main taglist plugin file 
+         doc/taglist.txt    - documentation (help) file 
+
+   Refer to the |add-plugin|, |add-global-plugin| and |runtimepath| Vim 
+   help pages for more details about installing Vim plugins. 
+2. Change to the $HOME/.vim/doc or $HOME/vimfiles/doc or $VIM/vimfiles/doc 
+    directory, start Vim and run the ":helptags ." command to process the 
+    taglist help file. Without this step, you cannot jump to the taglist help 
+    topics. 
+3. If the exuberant ctags utility is not present in your PATH, then set the 
+    Tlist_Ctags_Cmd variable to point to the location of the exuberant ctags 
+    utility (not to the directory) in the .vimrc file. 
+4. If you are running a terminal/console version of Vim and the terminal 
+    doesn't support changing the window width then set the 
+    'Tlist_Inc_Winwidth' variable to 0 in the .vimrc file. 
+5. Restart Vim. 
+6. You can now use the ":TlistToggle" command to open/close the taglist 
+    window. You can use the ":help taglist" command to get more information 
+    about using the taglist plugin. 
+    
+    
+minibufexpl.vim:http://www.vim.org/scripts/script.php?script_id=159
+install details
+Copy minibufexpl.vim into your plugin directory. Or :source minibufexpl.vim. That is all you need to get started. 
+
+If you want to enable extra functionality (documented in the source) you might want to add the following to your .vimrc: 
+
+  let g:miniBufExplMapWindowNavVim = 1 
+  let g:miniBufExplMapWindowNavArrows = 1 
+  let g:miniBufExplMapCTabSwitchBufs = 1 
+  let g:miniBufExplModSelTarget = 1 
+  
+cscope：apt-get install cscope
